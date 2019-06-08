@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+    <meta name="theme-color" content="#FFE1C4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        .hero-body{
+            height: 100% !important;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .field{
+            max-width: 25rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-body has-background-light">
+            <div class="container">
+                <div class="field">
+                    <label>State of Origin</label>
+                    <p class="control">
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                <span>Choose a state</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <ul>
+                                        <li><a class="subtitle">Abia</a></li>
+                                        <li><a class="subtitle">Anambra</a></li>
+                                        <li><a class="subtitle">Delta</a></li>
+                                        <li><a class="subtitle">Edo</a></li>
+                                        <li><a class="subtitle">Enugu</a></li>
+                                        <li><a class="subtitle">FCT</a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+                <div class="field">
+                    <label>Date of Birth</label>
+                    <div class="control">
+                        <input class="input" type="date">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Residential Address</label>
+                    <div class="control">
+                        <input class="input" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Email Address</label>
+                    <div class="control">
+                        <input class="input" type="email">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Link to Image</label>
+                    <div class="control">
+                        <input class="input" type="url">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>password</label>
+                    <div class="control">
+                        <input class="input" type="password">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Confirm</label>
+                    <div class="control">
+                        <input class="input" type="password">
+                    </div>
+                </div>
+                <button class="button is-success">
+                    <a class="has-text-light" href="teachers-dashboard.html">Proceed</a>
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

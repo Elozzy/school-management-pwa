@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <title>Parent Dashboard</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+    <meta name="theme-color" content="#FFE1C4">
+    <style>
+      #school-name{
+        padding: 2rem;
+      }
+      aside{
+        max-width: 20rem;
+        max-height: 100% !important;
+        margin-bottom: 5%;
+        padding-left: 2%;
+        padding-right: 3%;
+        padding-bottom: 3rem;
+        border: solid #20bc56 1px;
+        background: rgb(241, 255, 207);
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        float: unset !important;
+      }
+      .navbar-burger{
+        display: block !important;
+      }
+    </style>
+</head>
+<body>
+  <section class="hero is-light is-fullheight">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <header class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <div class="navbar-item">
+              <div id="drop" class="dropdown">
+                <div class="dropdown-trigger">
+                    <span id="open" class="navbar-burger burger" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                      <aside class="menu">
+                        <span id="close" class="menu-label icon">
+                            <i class="far fa-window-close"></i>
+                        </span>
+                          <p class="menu-label">
+                            General
+                          </p>
+                          <ul class="menu-list">
+                            <li><a>Overview</a></li>
+                            <li><a>Announcements</a></li>
+                            <li><a>Library</a></li>
+                          </ul>
+                          <ul class="menu-list">
+                            <li><a href="mailto:school@gmail.com?Subject=Complaint" target="blank"> File Complaint/Enquiry</a></li>
+                          </ul>
+                          <p class="menu-label">
+                            Transactions
+                          </p>
+                          <ul class="menu-list">
+                            <li><a>Pay Fees</a></li>
+                          </ul>
+                          <ul class="menu-list">
+                            <li><a>Forum</a></li>
+                            <li><a>Market</a></li>
+                          </ul>
+                      </aside>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <a href="mailto:school@gmail.com?Subject=Complaint" target="blank"></a>
+      </div>
+    </div>
+  
+    <!-- Hero footer: will stick at the bottom -->
+    
+    
+  </section>
+
+  <script>
+  // script to make the dropdown work
+  $(document).ready(function(){
+    $('#open').click(function(){
+      $('#drop').addClass('is-active');
+    })
+    $('#close').click(function(){
+      $('#drop').removeClass('is-active');
+    })
+  });
+  </script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
