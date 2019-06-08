@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <title>Home</title>
+    <style>
+    .navbar{
+        border-bottom: solid 1px #20bc56;
+      }
+      .section{
+        border: solid 2px #c4c4c4;
+      }
+    .field{
+        max-width: 25rem;
+        margin: auto !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+        }
+    .login{
+        border: solid 1px #c4c4c4;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero is-success is-large">
+        <div class="hero-head">
+          <!--navbar starts here-->
+          <nav class="navbar has-background-light has-text-dark">
+            <div class="container">
+              <div class="navbar-brand">
+                <a class="navbar-item is-active">
+                  <img src="img/badge.png" alt="Logo">
+                </a>
+                <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div id="navbarMenuHeroB" class="navbar-menu">
+                <div class="navbar-end">
+                  <a href="index.html" class="navbar-item is-active">
+                    Home
+                  </a>
+                  <a class="navbar-item has-text-black">
+                    Learn more
+                  </a>
+                  <a href="login.html" class="navbar-item has-text-black">
+                    Login
+                  </a>
+                  <span class="navbar-item">
+                    <a href="sign-up.html" class="button is-success is-inverted">
+                      <span>Sign up</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        
+        <!--body starts here-->
+        <div class="hero-body has-background-light">
+            <div id="login" class="section is-fullheight is-bold login">
+                <div class="field">
+                    <label class="has-text-weight-bold has-text-black">Login</label>
+                    <p class="control has-icons-left has-icons-right">
+                      <input class="input is-dark" type="email" placeholder="Email">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label class="has-text-weight-bold has-text-black">Password</label>
+                    <p class="control has-icons-left">
+                      <input class="input is-dark" type="password" placeholder="Password">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control">
+                      <button class="button is-success is-outlined">
+                        Login
+                      </button>
+                    </p>
+                </div>
+                <div class="container has-text-centered">
+                  <div class="has-text-success is-size-6">not a member yet?</div>
+                  <button id="change" class="button is-success is-inverted">sign up</button>
+                </div>
+              </div>
+
+              <div id="sign-up" class="section">
+                  <div class="tabs is-boxed is-large-desktop is-centered">
+                      <ul>
+                          <li id="school" class="is-active school"><a class="has-text-black">School</a></li>
+                          <li id="staff" class="staff"><a class="has-text-black">Staff</a></li>
+                          <li id="student" class="student"><a class="has-text-black">Student</a></li>
+                          <li id="parent" class="parent"><a class="has-text-black">Parent</a></li>
+                      </ul>
+                  </div>
+                      <span class="container view">
+                          <div id="view">
+                            <div id="school-login">
+                              <div class="field">
+                                  <label class="has-text-black has-text-weight-bold">School name</label>
+                                    <div class="control">
+                                      <input id="school-name" class="input" type="text" placeholder="School name">
+                                    </div>
+                              </div>
+                                <div id="email" class="field">
+                                <label class="has-text-black has-text-weight-bold">School Email</label>
+                                    <p class="control has-icons-left has-icons-right">
+                                    <input id="school-email" class="input" type="email" placeholder="Email">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    </p>
+                                </div>
+                                <div id="badge" class="field">
+                                <label class="has-text-black has-text-weight-bold">School badge</label>
+                                    <p class="control has-icons-left">
+                                    <input id="badge-link" class="input" type="text" placeholder="Paste link to image">
+                                    </p>
+                                </div>
+                              </div>
+                              <div id="others">
+                                    <div class="field access-code">
+                                    <label class="has-text-black has-text-weight-bold">Access code</label>
+                                        <p class="control has-icons-left has-icons-right">
+                                        <input id="access-code" class="input" type="text" placeholder="Access code">
+                                        </p>
+                                    </div>
+                                </div>
+                              <div id="field" class="field">
+                                  <p class="control">
+                                  <button class="button is-success">
+                                      Create
+                                  </button>
+                                  </p>
+                              </div>
+                              <div class="container has-text-centered">
+                                <div class="has-text-success is-size-6">Already a member?</div>
+                                <button id="change-back" class="button is-success is-inverted">Login</button>
+                              </div>
+                          </div>
+                      </span>
+                </div>
+        </div>
+
+        <div class="hero-foot">
+          </div>
+      </section>
+<script>
+      $(document).ready(function(){
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+
+        // toggle navbar
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+      });
+
+      // login to toggle
+      $(document).ready(function(){
+        $('#sign-up').hide();
+        $("#change").click(function(){
+          $("#login").toggle();
+          $('#sign-up').show();
+        });
+        $("#change-back").click(function(){
+          $("#sign-up").toggle();
+          $('#login').show();
+        });
+      });
+
+      //sign up parameters toggle
+      $(document).ready(function(){
+        $('.access-code').hide();
+        $('#staff, #student, #parent').click(function(){
+          $('#school, #staff, #student, #parent').removeClass('is-active');
+          $(this).addClass('is-active');
+          $('#badge, #email').hide();
+          $('.access-code').show();
+        });
+        $('#school').click(function(){
+          $('#school, #staff, #student, #parent').removeClass('is-active');
+          $(this).addClass('is-active');
+          $('.access-code').hide();
+          $('#badge, #email').show();
+        });
+      });
+</script> 
+</body>
+</html>
