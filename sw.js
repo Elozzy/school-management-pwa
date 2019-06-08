@@ -28,7 +28,7 @@ const limitCacheSize = (name, size) => {
     evt.waitUntil(
       caches.open(staticCacheName).then((cache) => {
         console.log('caching shell assets');
-        cache.addAll(assets);
+        cache.addAll(assests);
       })
     );
   });
@@ -62,7 +62,7 @@ self.addEventListener('activate', evt => {
         });
       }).catch(() => {
         if(evt.request.url.indexOf('.html') > -1){
-          return caches.match('/pages/fallback.html');
+          return caches.match('/pages/error.html');
         } 
       })
     );
