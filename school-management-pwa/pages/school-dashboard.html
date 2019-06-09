@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <title>SChool Dashboard</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+    <meta name="theme-color" content="#FFE1C4">
+    <style>
+      #school-name{
+        padding: 2rem;
+      }
+      aside{
+        max-width: 20rem;
+        max-height: 100% !important;
+        margin-bottom: 5%;
+        padding-left: 2%;
+        padding-right: 3%;
+        padding-bottom: 3rem;
+        border: solid #20bc56 1px;
+        background: rgb(241, 255, 207);
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        float: unset !important;
+      }
+      .navbar-burger{
+        display: block !important;
+      }
+      .field{
+        max-width: 30rem;
+      }
+      #present, #absent, #submit{
+        padding: 1rem;
+      }
+    </style>
+</head>
+<body>
+  <section class="hero is-light is-fullheight">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <header class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <div class="navbar-item">
+              <div id="drop" class="dropdown">
+                <div class="dropdown-trigger">
+                    <span id="open" class="navbar-burger burger" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                      <aside class="menu">
+                        <span id="close" class="menu-label icon">
+                            <i class="far fa-window-close"></i>
+                        </span>
+                          <p class="menu-label">
+                            General
+                          </p>
+                          <ul class="menu-list">
+                            <li><a>Overview</a></li>
+                            <li><a>Announcements</a></li>
+                            <li><a>Library</a></li>
+                            <li><a>Forum</a></li>
+                            <li><a>Market</a></li>
+                          </ul>
+                          <p class="menu-label">
+                            Admin
+                          </p>
+                          <ul class="menu-list">
+                            <li><a>Manage Staff</a>
+                              <ul>
+                                <li><a class=".staff-reg">add Staff</a></li>
+                                <li><a>Classes/Subjects</a></li>
+                                <li><a>Create Timetable</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a>Manage Students</a>
+                              <ul>
+                                <li><a class="student-reg">Register Student</a></li>
+                                <li><a>Admitted</a></li>
+                                <li><a>Suspended</a></li>
+                                <li><a>Expelled</a></li>
+                                <li><a>Graduated</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8A7FK01GpEgrzBViy72YWHV6swNF32MYDTV5lhR_1ISKK-A/viewform?usp=sf_link" target="blank"
+                              >Incident Report</a></li>
+                            <li><a>Complaint/Enquiry</a></li>
+                          </ul>
+                          <p class="menu-label">
+                            Transactions
+                          </p>
+                          <ul class="menu-list">
+                            <li><a>Payments</a></li>
+                            <li><a>Transfers</a></li>
+                            <li><a>Balance</a></li>
+                          </ul>
+                      </aside>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+
+      <!--Add Staff-->
+      <div id="staff-reg" class="container">
+        <div class="field">
+          <div class="control">
+            <input class="input is-success" type="text" placeholder="Staff Name">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input class="input is-success" type="number" placeholder="Phone Number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                    <span>Staff Role</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <ul>
+                        <li><a id="role" class="has-text-success">Administration</a></li>
+                        <li><a id="role" class="has-text-success">Teacher</a></li>
+                        <li><a id="role" class="has-text-success">Utilities</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <span>
+          <button class="button is-success">
+            Add Staff
+          </button>
+        </span>
+      </div>
+
+      <!--Register Student-->
+      <div id="student-reg" class="container student-reg">
+          <div class="field">
+            <div class="control">
+              <input class="input is-success" type="text" placeholder="Student Name">
+            </div>
+          </div>
+          <div class="field">
+              <div class="control">
+                <input class="input is-success" type="text" placeholder="Student ID">
+              </div>
+            </div>
+          <div class="field">
+            <div class="control">
+              <input class="input is-success" type="number" placeholder="Phone Number">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <div class="dropdown is-hoverable">
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                      <span>Class</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                    <div class="dropdown-content">
+                      <div class="dropdown-item">
+                        <ul>
+                          <li><a id="role" class="has-text-success">UPPERBASIC 1</a></li>
+                          <li><a id="role" class="has-text-success">UPPERBASIC 2</a></li>
+                          <li><a id="role" class="has-text-success">UPPERBASIC 3</a></li>
+                          <li><a id="role" class="has-text-success">UPPERBASIC 4</a></li>
+                          <li><a id="role" class="has-text-success">UPPERBASIC 5</a></li>
+                          <li><a id="role" class="has-text-success">UPPERBASIC 6</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <span>
+            <button class="button is-success">
+              Add Student
+            </button>
+          </span>
+        </div>
+      
+      <!--attendance field-->
+      <div id="attendance" class="container has-text-centered">
+        <div style="margin: auto" class="field search">
+          <div class="control has-icons-right">
+            <input id="search" class="input is-success" type="search" placeholder="search">
+            <span class="icon is-small is-right">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+        </div>
+        <div id="result" class="section is-centered columns">
+          <div>
+              <p class="staff subtitle">Mr John Doe</p>
+            <div>
+              <label id="present" class="checkbox">
+                <input type="checkbox">
+                Present
+              </label>
+              <label id="absent" class="checkbox">
+                <input type="checkbox">
+                Absent
+              </label>
+              <a id="submit" class="has-text-success">submit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--incident report-->
+      
+    </div>
+    <div style="height: 30%;" class="section">
+      <div class="container">
+        
+      </div>
+    </div>
+  
+    <!-- Hero footer: will stick at the bottom -->
+    
+    
+  </section>
+
+  <script>
+  // script to make the dropdown work
+  $(document).ready(function(){
+    $('#open').click(function(){
+      $('#drop').addClass('is-active');
+    });
+    $('#close').click(function(){
+      $('#drop').removeClass('is-active');
+    });
+
+    //dashboard menu toggle
+    $('#attendance, #result, #staff-reg, #student-reg').hide();
+    $(document).ready(function(){
+      
+    });
+  });
+  </script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
